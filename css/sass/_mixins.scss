@@ -50,20 +50,20 @@
 /**
  * Animations:
  */
-@mixin keyframe ($animation_name) {
-    @-webkit-keyframes $animation_name {
+@mixin keyframe ($name) {
+    @-webkit-keyframes #{$name} {
         @content;
     }
  
-    @-moz-keyframes $animation_name {
+    @-moz-keyframes #{$name} {
         @content;
     }
  
-    @-o-keyframes $animation_name {
+    @-o-keyframes #{$name} {
         @content;
     }
  
-    @keyframes $animation_name {
+    @keyframes #{$name} {
         @content;
     }
 }

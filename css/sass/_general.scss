@@ -1,4 +1,14 @@
-/* Body & Typografie: */
+/**
+* General CSS file 
+* Styling for all general classes:
+* 
+*/
+
+html, body{
+	margin:0;
+	padding:0;
+}
+
 body{
 	background:#fff;
 	font-size:16px;
@@ -6,19 +16,7 @@ body{
 	font-family:$font-stack;
 }
 
-a, a:visited{
-	color:#323232;
-	text-decoration:underline;
+
+#main{
+
 }
-
-h1,h2,h3,h4,h5,h6, p{
-	color:#323232;
-	font-family:$font-stack;
-}
-
-h1{font-size:44px;}
-h2{font-size:38px;}
-h3{font-size:28px;}
-
-
-#main{margin-top:87px;}	//account for the sticky menu...

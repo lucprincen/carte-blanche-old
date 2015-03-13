@@ -4,23 +4,36 @@
 * 
 */
 
-/** LIBS IMPORT: */
-@import 'libs/_normalize';
-@import 'libs/_bootstrap-grid';
-@import 'libs/_cuisine';
-
 /** Variables and functions */
 @import '_mixins';
 @import '_variables';
 
+/** Libs import: */
+@import 'libs/_normalize';
+@import 'libs/_bootstrap-grid';
+@import 'libs/_cuisine';
 
-/* General styling */
+
+// General styling:
 @import '_general';
 @import '_header';
 @import '_footer';
-@import '_button';
+@import '_ui';
+@import '_forms';
+@import '_textual';
 
 
-/* Per-page styling */
+// Template-level:
+@import '_page';
+@import '_blog';
 
 
+// Page-level:
+@import '_home';
+
+
+//Responsive:
+@import 'responsive/_general';
+@import 'responsive/_page';
+@import 'responsive/_blog';
+@import 'responsive/_home';

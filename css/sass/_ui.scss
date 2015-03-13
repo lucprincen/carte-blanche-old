@@ -1,6 +1,6 @@
 /**
-* Button CSS file 
-* Button + sub-button classes
+* UI CSS file 
+* Everything that enables user-interaction gets bootstrapped here
 * 
 */
 
@@ -19,9 +19,12 @@
 }
 
 
-
-
 .btn, a[class^="btn--"]{
 	@extend .button;
 }
 
+
+a, a:visited{
+	color:#323232;
+	text-decoration:underline;
+}
