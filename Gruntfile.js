@@ -84,10 +84,11 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['browserSync', 'watch'] );
+  grunt.registerTask('default', 'sass' );
   grunt.registerTask('build-css', ['sass', 'cssmin']);
 
   grunt.registerTask('responsive', ['browserSync', 'watch'] );
+  grunt.registerTask('live', ['browserSync', 'watch'] );
 
   grunt.registerTask('minify-js', ['concat', 'uglify']);
   grunt.registerTask('minify-css', ['concat'])
