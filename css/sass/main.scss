@@ -31,6 +31,9 @@
 // Page-level:
 @import '_home';
 
+body{
+	background:red;
+}
 
 //Responsive:
 @import 'responsive/_general';

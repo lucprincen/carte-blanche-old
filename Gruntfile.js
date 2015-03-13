@@ -49,6 +49,27 @@ module.exports = function(grunt) {
         files: ['css/sass/*.scss', 'css/sass/responsive/*.scss'],
         tasks: ['compass:dist']
       }
+    },
+
+     browserSync: {
+        
+        dev: {
+          bsFiles: {
+            src : [
+                'css/*.css',
+                '*.php',
+                'templates/*.php',
+                'views/*.php',
+                'elements/*.php',
+                'js/*.js'
+            ]
+          },
+          
+          options: {
+              watchTask: true,
+              proxy: 'localhost:8888',
+          }
+        }
     }
   });
 
@@ -59,11 +80,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-browser-sync');
+
 
   // Default task(s).
-  grunt.registerTask('default', ['sass'] );
+  grunt.registerTask('default', ['browserSync', 'watch'] );
   grunt.registerTask('build-css', ['sass', 'cssmin']);
 
+  grunt.registerTask('responsive', ['browserSync', 'watch'] );
 
   grunt.registerTask('minify-js', ['concat', 'uglify']);
   grunt.registerTask('minify-css', ['concat'])
